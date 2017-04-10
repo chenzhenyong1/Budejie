@@ -10,6 +10,11 @@
 #import "UIImage+Extension.h"
 #import "BDJTabBar.h"
 
+#import "BDJEssenceViewController.h"
+#import "BDJFriendTrendViewController.h"
+#import "BDJNewViewController.h"
+#import "BDJMeViewController.h"
+
 @interface BDJTabBarController ()
 
 @end
@@ -61,26 +66,26 @@
 - (void)AddChildViewControllers
 {
     // 精华
-    UIViewController *essenceVC = [UIViewController new];
+    BDJEssenceViewController *essenceVC = [BDJEssenceViewController new];
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:essenceVC];
     [self setupChildVCTabBarItemWithVC:nav imageName:@"tabBar_essence_icon" selectedImageName:@"tabBar_essence_click_icon" title:@"精华"];
     [self addChildViewController:nav];
     
     // 新帖
-    UIViewController *newVC = [UIViewController new];
+    BDJNewViewController *newVC = [BDJNewViewController new];
     UINavigationController *nav1 = [[UINavigationController alloc] initWithRootViewController:newVC];
     [self setupChildVCTabBarItemWithVC:nav1 imageName:@"tabBar_new_icon" selectedImageName:@"tabBar_new_click_icon" title:@"新帖"];
     [self addChildViewController:nav1];
     
     
     // 关注
-    UIViewController *friendTrendVC = [UIViewController new];
+    BDJFriendTrendViewController *friendTrendVC = [BDJFriendTrendViewController new];
     UINavigationController *nav3 = [[UINavigationController alloc] initWithRootViewController:friendTrendVC];
     [self setupChildVCTabBarItemWithVC:nav3 imageName:@"tabBar_friendTrends_icon" selectedImageName:@"tabBar_friendTrends_click_icon" title:@"关注"];
     [self addChildViewController:nav3];
     
     // 我
-    UIViewController *meVC = [UIViewController new];
+    BDJMeViewController *meVC = [BDJMeViewController new];
     UINavigationController *nav4 = [[UINavigationController alloc] initWithRootViewController:meVC];
     [self setupChildVCTabBarItemWithVC:nav4 imageName:@"tabBar_me_icon" selectedImageName:@"tabBar_me_click_icon" title:@"我"];
     [self addChildViewController:nav4];

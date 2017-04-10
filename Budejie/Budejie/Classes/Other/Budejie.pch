@@ -14,6 +14,9 @@
 
 #import "UIView+Extension.h"
 
+
+#define BDJFunc BDJLog(@"%s",__func__);
+
 #ifdef DEBUG // 调试
 
 #define BDJLog(...) NSLog(__VA_ARGS__)

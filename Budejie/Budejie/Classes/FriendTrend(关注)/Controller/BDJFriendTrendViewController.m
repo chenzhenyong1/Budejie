@@ -21,7 +21,8 @@
     self.view.backgroundColor = [UIColor blueColor];
     
     self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"friendsRecommentIcon"] highImage:[UIImage imageNamed:@"friendsRecommentIcon-click"] target:self action:@selector(leftBarButtonClick)];
-
+    
+    self.navigationItem.title = @"我的关注";
 }
 
 #pragma mark - 导航栏按钮点击

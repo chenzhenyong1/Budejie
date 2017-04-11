@@ -24,10 +24,11 @@
     UIBarButtonItem *settingItem =  [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-setting-icon"] highImage:[UIImage imageNamed:@"mine-setting-icon-click"] target:self action:@selector(setting)];
     
     // 夜间模型
-    UIBarButtonItem *nightItem =  [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-moon-icon"] highImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
+    UIBarButtonItem *nightItem =  [UIBarButtonItem itemWithImage:[UIImage imageNamed:@"mine-moon-icon"] selectedImage:[UIImage imageNamed:@"mine-moon-icon-click"] target:self action:@selector(night:)];
     
     self.navigationItem.rightBarButtonItems = @[settingItem,nightItem];
     
+    self.navigationItem.title = @"我的";
 }
 
 #pragma mark - 导航栏按钮点击
@@ -39,7 +40,10 @@
 
 - (void)setting
 {
+    UIViewController *settingVC = [UIViewController new];
+    settingVC.view.backgroundColor = [UIColor blueColor];
     
+    [self.navigationController pushViewController:settingVC animated:YES];
 }
 
 #pragma mark - Table view data source
